@@ -39,9 +39,21 @@ public class PracticeSet {
         }
     }
 
+    //Write a Java method to compute the sum of the digits in an integer.
+    public static int sumOfDigits(int x){
+       int sum =0;
+        while(x!=0){
+          sum += lastDigit(x);
+          x = x / 10;
+        }
+
+        return sum;
+    }
+
     public static void main(String[] args) {
         // System.out.println("The average is "+avg(5,8,9));
         // System.out.println(isEven(9));
-        isPalindrome(42524);
+        //isPalindrome(42524);
+       System.out.println(sumOfDigits(678)); 
     }
 }
