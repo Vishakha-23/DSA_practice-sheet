@@ -1,0 +1,39 @@
+package Basics;
+
+import java.util.*;
+
+public class Calculator {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter 1st number:");
+        int a = sc.nextInt();
+
+        System.out.println("Enter operator:");
+        char x = sc.next().charAt(0);//to take operator input as char
+
+        System.out.println("Enter 2nd number:");
+        int b = sc.nextInt();
+
+        switch (x) {
+            case '+':
+                System.out.println(a + b);
+                break;
+            case '-':
+                System.out.println(a - b);
+                break;
+            case '*':
+                System.out.println(a * b);
+                break;
+            case '/':
+                System.out.println(a / b);
+                break;
+
+            default:
+                System.out.println("Invalid operator!");
+                break;
+        }
+    }
+
+}
