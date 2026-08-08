@@ -1,7 +1,7 @@
 package Arrays2;
 
 public class MaxSubarray {
-    // calculate maximum of sum of subarrays by brute force method
+    //  brute force method
     public static void bruteForce(int arr[]) {
         int maxSum = Integer.MIN_VALUE;
         for (int i = 0; i < arr.length; i++) {// loop-1
@@ -19,7 +19,7 @@ public class MaxSubarray {
         System.out.println("Max Subarray Sum: " + maxSum);
     }
 
-    // calculate maximum of sum of subarrays by prefix sum method
+    // prefix sum method
     public static void prefixSum(int arr[]){
         int maxSum = Integer.MIN_VALUE;
         int currSum=0;
@@ -47,9 +47,30 @@ public class MaxSubarray {
         System.out.println("Max Subarray sum: " + maxSum);
     }
 
+    public static void kadane(int arr[]){
+        int curr = 0;
+        int maxSum = Integer.MIN_VALUE;
+
+        for(int i=0;i<arr.length;i++){
+            curr+=arr[i];
+            if(curr<0){
+                curr=0;
+            }
+            if(maxSum<curr){
+                maxSum=curr;
+            }
+        }
+
+        System.out.println("Max subarray sum: " + maxSum);
+    }
+
+
     public static void main(String[] args) {
         int num[] = { 1, -2, 6, -1, 3 };
+        int number[]={-2,-3,4,-1,-2,1,5,-3};
        // bruteForce(num);
-       prefixSum(num);
+       //prefixSum(num);
+       kadane(number);
+
     }
 }
