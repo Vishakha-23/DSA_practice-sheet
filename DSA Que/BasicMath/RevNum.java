@@ -3,7 +3,7 @@
 public class RevNum {
 
     public static void main(String[] args) {
-        int myNum = 1534236469;
+        int myNum = 153423;
         int reverse = 0;
 
         while (myNum > 0) {
