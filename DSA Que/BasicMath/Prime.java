@@ -1,0 +1,20 @@
+public class Prime {
+
+    public static boolean isPrime(int num) {
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return true;
+
+            }
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+        int myNum = 19;
+
+        System.out.println(
+            isPrime(myNum) ? "Prime" : "Not Prime"
+        );
+    }
+}
